@@ -1,0 +1,67 @@
+body {
+  font-family: 'Microsoft JhengHei', sans-serif;
+}
+.jumbotron {
+  background: url(img/banner.jpg) no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  padding: 0;
+  color: #ffffff;
+}
+
+.jumbotron .tagline {
+  color: #fff;
+  font-size: 42px;
+  text-shadow: 0 0 10px #000;
+}
+.jumbotron .lead {
+  color: #ccc;
+}
+
+.jumbotron [class*="col-"] {
+  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px solid rgba(255, 255, 255, 0.2);
+  height: 400px;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  overflow: auto;
+}
+
+.map{
+	height: 300px;
+
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(img/banner-foot.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+.banner [class*="col-"] {
+  background-color: #eee;
+  background-color: rgba(255, 100, 90, 0.7);
+  border: 0px solid rgba(255, 255, 255, 0.5);
+  height: 200px;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow: auto;
+}
