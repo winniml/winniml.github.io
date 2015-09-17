@@ -221,3 +221,52 @@ body {
 .timeline-body > p + p {
     margin-top: 5px;
 }
+
+/*時間軸中間年度區塊*/
+.tldate {
+  display: block;
+  width: 100px;
+  background: #cccccc;
+  border: 1px solid #bfbfbf;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 3px 0;
+  font-weight: bold;
+  text-align: center;
+  -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.3);
+}
+
+/*工程進度頁*/
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+
