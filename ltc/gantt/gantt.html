@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery.Gantt</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://taitems.github.com/UX-Lab/core/css/prettify.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    body {
+        font-family: 'Microsoft JhengHei', sans-serif;
+        font-size: 13px;
+        padding: 0 0 50px 0;
+    }
+    
+    .contain {
+        width: 800px;
+        margin: 0 auto;
+    }
+    
+    h1 {
+        margin: 40px 0 20px 0;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+        padding-bottom: 3px;
+        
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    
+    table th:first-child {
+        width: 150px;
+    }
+    /* Bootstrap 3.x re-reset */
+    
+    .fn-gantt *,
+    .fn-gantt *:after,
+    .fn-gantt *:before {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+    </style>
+</head>
+
+<!--連結列-->
+        <nav class="navbar navbar-default navbar-fixed-top" role=navigation>
+            <div class=container>
+                <div class=navbar-header>
+                    <button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#navbar aria-expanded=false aria-controls=navbar> <span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button> <a class=navbar-brand href=#>長照教學大樓工程</a>
+                </div>
+                <div id=navbar class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class=dropdown><a href="index.html">計畫簡介 </a> </li>
+                        <li class=dropdown><a href="team.html">執行團隊 </a> </li>
+                        </li>
+                        <li class="active"><a href="progress.html">工程進度 </a></li>
+                        <li class=dropdown><a href="events.html">大事記要</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--時間軸-->
+        <!-- 工程進度 -->
+        <div class="container top-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lead">工程進度</p>
+                    <div class="list-group">
+                        <a href="../progress.html" class="list-group-item">2015年工程進</a>
+                        <a href="../time-lapse.html" class="list-group-item">工程縮時紀錄</a>
+                        <a href="gantt.html" class="list-group-item">工程進度表</a>
+                        <!--噪音、空污、鄰房-->
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row carousel-holder">
+                        <div class="col-md-12">
+                            <p></p>
+                            <div class="gantt">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    
+    <!--區分線-->
+        <hr class="featurette-divider">
+        <!--頁尾-->
+        <div id="footer">
+            <footer class=footer>
+                <div class=container>
+                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p class=text-muted>2015©埔基醫療財團法人長期照護暨教育訓練中心籌備處｜545 南投縣埔里鎮愛蘭里鐵山路一號｜+886-49-2912-151#1000 </div>
+            </footer>
+        </div>
+</body>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fn.gantt.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prettify.js"></script>
+    <script>
+    $(function() {
+
+        "use strict";
+
+        $(".gantt").gantt({
+            source: [{
+                name: "擋土設施",
+               
+                values: [{
+                    from: "/Date(1439164800000)/",
+                    to: "/Date(1442102400000)/",
+                    label: "2015/08/10-2015/09/13",
+                    customClass: "ganttRed"
+                }]
+            }, {
+                name: "土方開挖工程 ( 分段配合基礎RC ) ",
+               
+                values: [{
+                    from: "/Date(1442188800000)/",
+                    to: "/Date(1447286400000)/",
+                    label: "2015/09/14-2015/11/12",
+                    customClass: "ganttGreen"
+                }]
+            }, {
+                name: "結構體工程",
+               
+                values: [{
+                    from: "/Date(1443916800000)/",
+                    to: "/Date(1467849600000)/",
+                    label: "2015/10/04-2016/07/04",
+                    customClass: "ganttBlue"
+                }]
+            }, {
+                name: "室內裝修工程",
+               
+                values: [{
+                    from: "/Date(1463270400000)/",
+                    to: "/Date(1472774400000)/",
+                    label: "2016/05/15-2016/09/02",
+                    customClass: "ganttGreen"
+                }]
+            }, {
+                name: "外牆裝修工程",
+                
+                values: [{
+                    from: "/Date(1466640000000)/",
+                    to: "/Date(1474761600000)/",
+                    label: "2016/06/23-2016/09/25",
+                    customClass: "ganttBlue"
+                }]
+            }, {
+                name: "屋頂防水隔熱工程",
+                
+                values: [{
+                    from: "/Date(1474156800000)/",
+                    to: "/Date(1475625600000)/",
+                    label: "2016/09/18-2016/10/05",
+                    customClass: "ganttOrange"
+                }]
+            }, {
+                name: "外部施工架拆除工程",
+               
+                values: [{
+                    from: "/Date(1474156800000)/",
+                    to: "/Date(1474761600000)/",
+                    label: "2016/09/18-2016/09/25",
+                    customClass: "ganttOrange"
+                }]
+            }, {
+                name: "水土保持設施及景觀工程",
+                
+                values: [{
+                    from: "/Date(1474848000000)/",
+                    to: "/Date(1476230400000)/",
+                    label: "2016/09/26-2016/10/12",
+                    customClass: "ganttOrange"
+                }]
+            }, {
+                name: "使用執照取得",
+                
+                values: [{
+                    from: "/Date(1474848000000)/",
+                    to: "/Date(1481414400000)/",
+                    label: "2016/09/26-2016/12/11",
+                    customClass: "ganttRed"
+                }]            
+            }],
+            navigate: "scroll",
+            maxScale: "hours",
+            itemsPerPage: 10,
+            onItemClick: function(data) {
+                alert("Item clicked - show some details");
+            },
+            onAddClick: function(dt, rowId) {
+                alert("Empty space clicked - add an item!");
+            },
+            onRender: function() {
+                if (window.console && typeof console.log === "function") {
+                    console.log("chart rendered");
+                }
+            }
+        });
+
+        $(".gantt").popover({
+            selector: ".bar",
+            title: "I'm a popover",
+            content: "And I'm the content of said popover.",
+            trigger: "hover"
+        });
+
+        prettyPrint();
+
+    });
+    </script>
+</body>
+
+</html>
