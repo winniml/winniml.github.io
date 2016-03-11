@@ -108,6 +108,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 
+
 /**** Start Logo Section ****/
 
 #logo-section {
@@ -614,7 +615,7 @@ and (max-width : 991px) {
 
 
 .plan-name {
-	padding: 15px 0;
+	padding: 20px 0;
     background: #FF432E;
 }
 
@@ -622,6 +623,11 @@ and (max-width : 991px) {
 	font-weight: 300;
 	color: #fff;
 }
+.plan-name h1 {
+    font-weight: 300;
+    color: #fff;
+}
+
 
 .plan-price {
 	padding: 25px 0;
